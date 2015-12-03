@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Learning CSS BBC</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style type="text/css">
+
+			body {
+				margin:0px;
+				font-family: 'Segoe UI', Tahoma, sans-serif;
+			}
+
+			html {
+				margin:0;
+				padding:0;
+				border:0;
+				vertical-align: baseline;
+			}
+
+			h1 {
+				font-weight: bold;
+				color:black;
+				margin: 15px 0 0 7px;
+			}
+
+			h2 {
+				color: #404040;
+				font-weight: normal;
+				margin: 15px 0 10px 0;
+			}
+
+			h3 {
+				color: #404040;
+				font-weight: normal;
+				margin: 0;
+				padding-left: 70px;
+			}
+
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color:black;
+			}
+
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				color:black;
+				opacity:1;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+				color:black;
+				opacity:1;
+			}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color:black;
+			}
+		
+			#topbar{
+				background-color:#FFFFFF;
+				width:100%;
+				height:40px;
+				color:black;
+				font-family: Arial,Helvetica,sans-serif;
+				font-size: 71.4%
+			}
+
+
+			.fixedwidth {
+				width:1000px;
+				margin:0 auto;
+			}
+
+			#logodiv {
+				padding: 8px 0 6px 0;
+				float:left;
+				height: 100%;
+				border-right:1px solid gray;
+				padding-right: 10px;
+			}
+
+			#signindiv {
+				padding: 9px 75px 10px 15px;
+				float:left;
+				height: 100%;
+				font-size: 1.2em;
+				font-weight: bold;
+				border-right: 1px solid gray;
+			}
+
+			#signindiv img{
+				position: relative;
+				top:3px;
+			}
+
+			#topmenu {
+				float:left;
+			}
+
+			#topmenu ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			#topmenu li {
+				float:left;
+				list-style: none;
+				font-weight: bold;
+				font-size: 1.1em;
+				border-right: 1px solid gray;
+				height:100%;
+				padding: 15px 20px 11px 20px;
+			}
+
+			#searchdiv {
+				float:left;
+				padding: 8px 0 0 10px;
+			}
+
+			#searchdiv input {
+				height:20px;
+				border: none;
+				padding:2px;
+				font-size:1.2em;
+				background-color: #E6E6E6;
+				padding-left:10px;
+				background-image:url('images/orb-search-dark.png');				
+				background-repeat: no-repeat;
+				background-position: center right;
+			}
+
+			#newsbar{
+				height:60px;
+				background-color:#BB1919;
+			}
+
+			#newstext img {
+				margin: 13px 0 0px 7px !important;
+			}
+
+			#topicbar {
+				background-color:#a91717;
+				height:32px;
+				color:white;
+			}
+
+			#topicmenu ul {
+				float:left;
+				margin:0;
+				padding:0;
+			}
+
+			.selected {
+				border-bottom: 4px solid #fff;
+				border-right:none !important;
+			}
+
+			#topicmenu li {
+				float:left;
+				list-style: none;
+				font-size: .9em;
+				border-right: 1px solid gray;
+				margin:5px 3px 0px 3px;
+				padding: 0px 10px 2px 10px;
+			}
+
+			#topicbarsecondary {
+				height:30px;
+				color:black;
+			}
+
+			#topicmenusecondary ul {
+				float:left;
+				margin:0;
+				padding:0;
+			}
+
+			.selectedsecondary {
+				border-bottom: 4px solid #A91717;
+				font-size:1.3em !important;
+				position:relative;
+				top:-5px;
+				border-right:none !important;
+			}
+
+			#topicmenusecondary li {
+				float:left;
+				list-style: none;
+				font-size: .9em;
+				border-right: 1px solid gray;
+				margin:5px 3px 0px 3px;
+				padding: 0px 10px 0px 10px;
+			}
+
+			#content {
+				width: 100%;
+				color:#5a5a5a;
+			}
+
+			.leftfixedwidth {
+				float: left;
+				width: 67%;
+			}
+
+			.rightfixedwidth {
+				width:29%;
+				margin-right: 27px;
+				float:right;
+				padding-left: 13px;
+			}
+
+			.rightfixedwidth p {
+				margin: 0;
+				padding: 0;
+			}
+
+			.rightfixedwidth ul {
+				list-style: none;
+				margin:0;
+				padding: 0;
+			}
+
+			.headlineimage {
+				float:right;
+			}
+
+			.newsitem {
+				width: 35%;
+			}
+
+			.newsitem p {
+				font-size: .91em;
+				margin:6px 0 6px 0;
+			}
+
+			.newsitem ul {
+				list-style: none;
+				margin:0;
+				padding: 0;
+				line-height: 1.4em;
+			}
+
+			.newsitem ul:before {
+				background-color: #bb1919;
+				content: '';
+				display: block;
+				height: 1px;
+				margin-bottom: 5px;
+				margin-top: 8px;
+				width: 40px;
+			}
+
+			.newsitem a {
+				font-size: .91em;
+				text-decoration: none;
+				color:black;
+			}
+
+			.newsitem a:hover {
+				text-decoration: underline;
+			}
+
+			.dateposted {
+				float:left;
+				font-size: .9em;
+				border-right: 1px solid black;
+				padding-right: 10px;
+			}
+
+			.contentgroup {
+				position: relative;
+				left:10px;
+				font-size: .9em;
+				color: #BB1919;
+			}
+
+
+			.contentsidebar {
+				border-left:1px solid gray;
+				padding-left: 13px;
+			}
+
+			.contentsidebar li {
+				background-image: url("images/youtubeexample.png");
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left:100px;
+				margin-bottom: 18px;
+				font-size:.8em;
+				font-weight: bold;
+				color:black;
+				height: 50px;
+				line-height: 12px;
+			}
+
+			#live {
+				float:left;
+				background-color:#BB1919;
+				color:white;
+				font-weight: bold;
+				padding:2px 5px 2px 25px;
+				font-size:.8em;
+			}
+
+			.uldateposted {
+				float:left;
+				font-size: .9em;
+				border-right: 1px solid black;
+				padding-right: 10px;
+				padding-left: 10px;
+				margin-top: 10px;
+				color:#5a5a5a;
+				font-weight: normal;
+			}
+
+			.ulcontentgroup {
+				position: relative;
+				left: -15px;
+				float:right;
+				font-size: .9em;
+				color: #BB1919;
+				margin-top: 10px;
+			}
+
+			.break {
+				clear:both;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="topbar">
+				<div class="fixedwidth">
+					<div id="logodiv">
+						<img src="images/bbc-blocks-dark.png">
+					</div>
+					<div id="signindiv">
+						<img src="images/bbcid_orb_signin_dark.png"> 
+						Sign in
+					</div>
+					<div id="topmenu">
+						<ul>
+							<li>News</li>
+							<li>Sport</li>
+							<li>Weather</li>
+							<li>Shop</li>
+							<li>Earth</li>
+							<li>Travel</li>
+							<li>More </li> <!--Todo: Add the carot next to More -->
+						</ul>
+					</div>
+					<div id="searchdiv">
+						<input type="text" placeholder="Search"/>
+					</div>
+				</div>
+			</div>
+			<div class="break"></div>
+			<div id="newsbar">
+				<div class="fixedwidth">
+					<span id="newstext"><img src="images/news.png" height="30"></span>
+				</div>
+			</div>
+			<div id="topicbar">
+				<div class="fixedwidth">
+					<div id="topicmenu">
+						<ul>
+							<li>Home</li>
+							<li>Video</li>
+							<li>World</li>
+							<li>US & Canada</li>
+							<li class="selected">UK</li>
+							<li style="border-left:1px solid gray">Business</li>
+							<li>Tech</li>
+							<li>Science</li>
+							<li>Magazine</li>
+							<li>Entertainment & Arts</li>
+							<li>Health</li>
+							<li style="border-right:none">More </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="topicbarsecondary">
+				<div class="fixedwidth">
+					<div id="topicmenusecondary">
+						<ul>
+							<li class="selectedsecondary">UK</li>
+							<li style="border-left:1px solid gray">England</li>
+							<li>N. Ireland</li>
+							<li>Scotland</li>
+							<li>Wales</li>
+							<li style="border-right:none">Politics</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="break"></div>
+			<div id="content">
+				<div class="fixedwidth">
+						<div class="leftfixedwidth">
+							<h1>Corbyn vows 'new kind of politics'</h1>
+							<img class="headlineimage" src="images/_84877309_84877308.jpg" />
+							<div class="newsitem">
+								<p>Labour leadership candidate Jeremy Corbyn has promised a "new kind of politics" if he wins the contest.</p>
+								<div class="dateposted">
+									43 minutes ago
+								</div>
+								<div class="contentgroup">
+									UK Politics
+								</div>
+								<ul>
+									<a href="">Corbyn begins Scottish compaign tour</a>
+									<br />
+									<a href="">Cooper attacks Corbyn's credibility</a>
+									<br />
+									<a href="">Corbyn "We don't do personal attacks"</a>
+									<br />
+									<a href="">'Corbynmania': Where it comes from</a>
+								</ul>
+							</div>
+						</div>
+						<div class="rightfixedwidth">
+							<div class="contentsidebar">
+									<h2>Watch/Listen</h2>
+									<div id="live">
+										Live
+									</div>
+									<h3>BBC Radio 5</h3>
+							</div>
+								<br />
+							<div class="contentsidebar">
+								<ul>
+									<li>
+										Flooding in South East after downpours
+										<br /> <div class="uldateposted">43 minutes ago</div><div class="ulcontentgroup">UK Politics</div>
+									</li>
+									<li>
+										Battle for soul of Labour, says Cooper
+										<br /> <div class="uldateposted">43 minutes ago</div><div class="ulcontentgroup">UK Politics</div>
+									</li>
+									<li>
+										A-level results day: Here's how you on
+										<br /> <div class="uldateposted">43 minutes ago</div><div class="ulcontentgroup">UK Politics</div>
+										</li>
+									<li>
+										Labour candidates on big issues
+										<br /> <div class="uldateposted">43 minutes ago</div><div class="ulcontentgroup">UK Politics</div>
+										</li>
+									<li>
+									Edinburgh Fringe festival kicks off
+									<br /> <div class="uldateposted">43 minutes ago</div><div class="ulcontentgroup">UK Politics</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
