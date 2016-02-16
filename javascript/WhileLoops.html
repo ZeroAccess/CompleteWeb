@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While Loops</title>
+</head>
+<body>
+<p>How many fingers are you holding up?</p>
+<input id='myNumber' />
+
+<button id="guess">Guess!</button>
+
+<script type='text/javascript'>
+document.getElementById("guess").onclick=function() {
+    var gotIt = true;
+    var guesses = 1;
+    if (document.getElementById('myNumber').value > 5) {
+        alert('How many fingers do you have on your hand? Let\'s just say you have 5');
+    } else {
+        while(gotIt) {
+            var x = Math.random();
+            x = Math.floor(6 * x);
+            if(document.getElementById('myNumber').value == x) {
+                gotIt = false;
+            } else {
+                guesses++;
+            }
+        }
+        alert('I got it! It was ' + x + ' and it took me ' + guesses + ' guesses');
+    }
+}
+</script>
+
+
+</body>
+</html>

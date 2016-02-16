@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reaction Tester</title>
+    <style type="text/css">
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        #timeResponse {
+
+        }
+    </style>
+
+    <div id="box">
+
+    </div>
+</head>
+<body>
+<p>Your reaction time is: <span id="timeResponse"></span> </p>
+
+<script type="text/javascript">
+
+   var createdTime;
+   var clickedTime;
+   var reactionTime;
+
+    document.getElementById("box").onclick = function() {
+        clickedTime = Date.now();
+        reactionTime = (clickedTime - createdTime)/1000;
+        makeBox();
+    };
+
+    function makeBox() {
+        document.getElementById("timeResponse").innerHTML = reactionTime;
+        var delay = Math.random() * 5000;
+        document.getElementById("box").style.visibility='hidden';
+        setTimeout(function() {
+            document.getElementById("box").style.visibility='visible';
+            createdTime = Date.now();
+        }, delay);
+    }
+
+
+
+</script>
+</body>
+</html>
