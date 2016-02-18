@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <title>Reaction Tester</title>
     <style type="text/css">
-        #box {
-            width: 100px;
-            height: 100px;
-            background-color: gray;
-        }
-        #timeResponse {
 
+        #startBox {
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            background-color: darkblue;
+            margin:auto;
+            color:white;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        #box {
+            position:relative;
+        }
+
+        #resetGame {
+            margin-bottom: 20px;
         }
     </style>
-
-    <div id="box">
-
-    </div>
 </head>
 <body>
 <p>Your reaction time is: <span id="timeResponse"></span> </p>
+<button id="resetGame">Stop Game</button>
+
+<div id="box">
+
+</div>
+
+<div id="startBox">Please Click Here to Start The Game</div>
 
 <script type="text/javascript">
 
@@ -27,24 +41,43 @@
    var clickedTime;
    var reactionTime;
 
-    document.getElementById("box").onclick = function() {
+    document.getElementById("startBox").onclick = function() {
         clickedTime = Date.now();
-        reactionTime = (clickedTime - createdTime)/1000;
+        reactionTime = 0.00;
+        document.getElementById("startBox").style.visibility='hidden';
         makeBox();
+
     };
+
+   document.getElementById("box").onclick = function() {
+       clickedTime = Date.now();
+       reactionTime = (clickedTime - createdTime)/1000;
+       makeBox();
+   };
 
     function makeBox() {
         document.getElementById("timeResponse").innerHTML = reactionTime;
-        var delay = Math.random() * 5000;
+        var delay = Math.random() * 3000;
         document.getElementById("box").style.visibility='hidden';
+        document.getElementById("box").style.display = 'block';
+
         setTimeout(function() {
+            document.getElementById("box").style.borderRadius = Math.floor(Math.random()* 70) + 3 + 'px';
+            document.getElementById("box").style.width = Math.random() * 200 + 3 +'px';
+            document.getElementById("box").style.height = Math.random() * 200 + 3 +'px';
+            document.getElementById("box").style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById("box").style.top = Math.random() * 500 + 3 +'px';
+            document.getElementById("box").style.left = Math.random() * 500 + 3 +'px';
             document.getElementById("box").style.visibility='visible';
             createdTime = Date.now();
         }, delay);
     }
 
-
-
+    document.getElementById("resetGame").onclick = function() {
+        document.getElementById("box").style.display = 'none';
+        document.getElementById("startBox").style.visibility='visible';
+        document.getElementById("timeResponse").innerHTML = 'Game Over';
+    }
 </script>
 </body>
 </html>
