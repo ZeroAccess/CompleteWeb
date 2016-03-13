@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <title>Alisha Productions</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="../jquery/jquery-1.12.1.min.js"></script>
+
+    <style>
+        body{
+            background-color: #FF4081;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+            font-family: 'Droid Sans', sans-serif;
+            font-weight: bold;
+            font-size: 5em;
+        }
+
+        p{
+            text-align: center;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 30px;
+            line-height: 65px;
+        }
+
+        #container{
+            background-color: #F1A93F;
+            height: 450px;
+            width: 500px;
+            border: 5px white solid;
+            border-radius: 30px;
+            position: relative;
+            margin: 100px 50px;
+        }
+
+        #words{
+            text-align: center;;
+            color: #FF4081;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 0 7px 0 7px;
+            border-bottom: 2px red solid;
+            font-family: 'Shadows Into Light',sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1> Hi there!</h1>
+    <p>Alisha is busy learning how she can make this site
+    <div id="words">astonishing</div>
+    <p>Stay tuned!</p>
+</div>
+
+
+<script>
+    window.onload = loop;
+    var i = 0;
+    var adjectives = [
+        "amazing",
+        "stunning",
+        "impressive",
+        "wonderful",
+        "awesome"
+    ];
+
+    function loop () {
+
+        setTimeout(function () {
+            document.getElementById("words").innerHTML = adjectives[i];
+            i++
+            if (i < adjectives.length) {
+                loop();
+            }
+        }, 1000)
+    }
+
+</script>
+</body>
+</html>
