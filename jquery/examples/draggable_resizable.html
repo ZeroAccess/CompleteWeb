@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning jQuery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<style>
+    .square {
+        width:200px;
+        height:200px;
+        text-align: center;
+        display:table;
+    }
+
+    .squareText {
+        display: table-cell;
+        vertical-align: middle;
+        color:white;
+        font-size:1.5em;
+    }
+
+    .green {
+        background:green;
+    }
+
+    .red {
+        background:red;
+    }
+
+    .resizable {
+
+    }
+</style>
+<body>
+<div id="container">
+    <div class="square green">
+        <p class="squareText">Drag Me</p>
+    </div>
+    <div class="square red resizable">
+        <p class="squareText">Resize Me!</p>
+    </div>
+</div>
+
+<script>
+    $(".square").draggable();
+    $(".resizable").resizable();
+</script>
+</body>
+</html>
