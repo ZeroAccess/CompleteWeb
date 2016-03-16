@@ -1,61 +1,71 @@
-body,html {
-    margin:0;
-    padding:0;
-}
-
-menu {
-    width: 100%;
-    text-align: center;
+body {
+    font-family:sans-serif;
     padding:0;
     margin:0;
-    list-style-type: none;
 }
 
-menu li {
-    display:inline-block;
-    cursor: pointer;
-    margin: 12px 0 0 0;
-    background-color:darkgrey;
-    padding: 3px;
-    border:hidden;
-    border-radius:15%;
+textarea {
+    resize:none;
+    border-top: none;
+    border-color: grey;
 }
 
-menu li:first-child {
+iframe {
+    border:none;
+}
+
+.active {
+    background-color: #E8F2FF;
+}
+
+.highlightedButton {
+    background-color: grey;
+}
+
+.panel {
     float:left;
-    margin-left: 20px;
+    width: 50%;
+    border-left:none;
 }
 
-menu li:last-child {
-    float:right;
-    margin-right: 50px;
+.hidden {
+    display:none;
 }
 
-a {
-   text-decoration: none;
+#header {
+    height: 30px;
+    background-color: #EEEEEE;
+    padding:5px 0 5px 5px;
 }
 
-a:visited {
-    color:black;
+#logo {
+    float:left;
+    font-weight:bold;
+    font-size: 1.2em;
+    padding: 3px 5px;
 }
 
-#topBar {
-    background-color:#d9dee2;
-    height: 50px;
-    border-bottom: 1px solid grey;
+#buttonContainer {
+    width: 182px;
+    margin: 0 auto;
 }
 
-#title {
-    font-weight: bold;
+.toggleButton {
+    float:left;
+    border:1px solid grey;
+    padding:6px;
+    border-right:none;
+    font-size: .9em;
+    cursor: pointer;
 }
 
-#mainPage {
-    display:inline-block;
+#html {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
-.column {
-    display:inline-block;
-    width: auto;
-    height: 100%;
-    border:1px solid #222;
+#output {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right:1px solid grey;
 }
