@@ -40,3 +40,17 @@ h4 {
     display:inline;
     margin-left: 10px;
 }
+
+#footer {
+    padding: 100px 0;
+    background-color: #18FFFE;
+}
+
+#footer img {
+    width: 250px;
+    height: 100px;
+}
+
+.card-deck-wrapper {
+    margin-bottom: 30px;
+}
