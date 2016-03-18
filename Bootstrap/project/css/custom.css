@@ -1,12 +1,15 @@
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .jumbotron {
     background: url("../images/cabin_in_the_woods.jpg");
     background-position: center top;
-    color:white;
+    color: white;
 }
 
 hr {
@@ -18,39 +21,39 @@ hr {
     padding: 0;
 }
 
-.centerfy{
+.centerfy {
     text-align: center;
-    margin:0 auto;
 }
 
-.col-centered{
+.col-centered {
     margin: 0 auto;
     float: none;
 }
 
 #signUpField {
-    width:300px;
+    width: 300px;
 }
 
-#secondaryPanel {
-    margin-top:30px;
+#about {
+    margin-top: 30px;
 }
 
 h4 {
-    display:inline;
+    display: inline;
     margin-left: 10px;
 }
 
-#footer {
-    padding: 100px 0;
+.card-img-top {
+    width: 100%;
+}
+
+#download {
+    margin-top: 30px;
+    padding: 200px 0;
     background-color: #18FFFE;
 }
 
-#footer img {
+#download img {
     width: 250px;
     height: 100px;
-}
-
-.card-deck-wrapper {
-    margin-bottom: 30px;
 }
