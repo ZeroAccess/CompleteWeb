@@ -1,0 +1,12 @@
+#container {
+    display: inline-flex;
+}
+
+#left {
+    margin: 20px;
+    width: 200px;
+}
+
+#right {
+    margin-top: 20px;
+}
